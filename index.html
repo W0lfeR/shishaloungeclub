@@ -33,7 +33,7 @@
 
           </div>
         </div>
-        <video src="videos/1.mp4" autoplay muted loop></video>
+        <video src="videos/1.mp4" class="background-video" autoplay loop muted playsinline></video>
       </div>
     </div>
 
@@ -47,7 +47,7 @@
 
           </div>
         </div>
-        <video src="videos/2.mp4" autoplay muted loop></video>
+        <video src="videos/2.mp4" class="background-video" autoplay loop muted playsinline></video>
       </div>
     </div>
   
@@ -61,7 +61,7 @@
 
           </div>
         </div>
-        <video src="videos/3.mp4" autoplay muted loop></video>
+        <video src="videos/3.mp4" class="background-video" autoplay loop muted playsinline></video>
       </div>
     </div>
     <ul class="controls">
@@ -107,6 +107,12 @@
       slides[index].classList.add('active');
     }
   </script>
+     <script>
+      var bgvideo = document.getElementsByClassName("background-video");
+      bgvideo.muted = true;
+      bgvideo.play();
+      </script>
+     <script src="./js/main.js"></script>
     <script src="js/headingAnimation.js"></script>
     <script src="js/contentAnimation.js"></script>
 </body>
