@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shisha Lounge Club</title>
+  <link rel="shortcut icon" type="image/icon" href="favicon/hookah.png" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="dns-prefetch" href="//www.google.com" />
+  <link rel="dns-prefetch" href="//www.youtube.com" />
+  <link rel="dns-prefetch" href="//www.facebook.com" />
+  <link rel="dns-prefetch" href="//www.instagram.com" />
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+  <link rel="canonical" href="" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="shishaloungeclub-navbar">
+      <a href="#krastanshishalounge-homepage" class="navbar-logo">
+        <img src="./logo/hookah.png" alt="hookah-logo"></a>
+    </header>
+
+    <div class="slide-container active">
+      <div class="slide">
+        <div class="content">
+          <h3 class="fancy">EXE Shisha Lounge</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/krastanshisha"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/exeshishaclub/"><i class="fab fa-instagram"></i></a>
+
+          </div>
+        </div>
+        <video src="videos/1.mp4" autoplay muted loop></video>
+      </div>
+    </div>
+
+    <div class="slide-container">
+      <div class="slide">
+        <div class="content">
+          <h3 class="fancy">Vision SM</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/krastanshisha"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/exeshishaclub/"><i class="fab fa-instagram"></i></a>
+
+          </div>
+        </div>
+        <video src="videos/2.mp4" autoplay muted loop></video>
+      </div>
+    </div>
+  
+    <div class="slide-container">
+      <div class="slide">
+        <div class="content">
+          <h3 class="fancy">3rd place</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/krastanshisha"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/exeshishaclub/"><i class="fab fa-instagram"></i></a>
+
+          </div>
+        </div>
+        <video src="videos/3.mp4" autoplay muted loop></video>
+      </div>
+    </div>
+    <ul class="controls">
+      <li id="prev" onclick="prev()"><img src="./img/left.png" alt=""></li>
+      <li id="next" onclick="next()"><img src="./img/right.png" alt=""></li>
+    </ul>
+    <div class="ag-smoke-block">
+      <!-- <div class="js-smoke_smoke ag-smoke_smoke ag-smoke_smoke-1-2"></div>
+      <div class="ag-smoke_smoke_box">
+        <div></div>
+        <div class="ag-format-container"></div>
+      </div>
+      <div class="ag-smoke_smoke ag-smoke_smoke-1-1"></div>
+      <div class="js-smoke_smoke ag-smoke_smoke ag-smoke_smoke-1-2"></div> -->
+
+      <div class="ag-smoke_smoke_box">
+        <div class="ag-smoke_smoke-2 ag-smoke_smoke-2-1"></div>
+        <div class="ag-smoke_smoke-2 ag-smoke_smoke-2-2"></div>
+        <div class="ag-smoke_smoke-2 ag-smoke_smoke-2-3"></div>
+        <div class="ag-smoke_smoke-2 ag-smoke_smoke-2-4"></div>
+        <div class="ag-smoke_smoke-2 ag-smoke_smoke-2-5"></div>
+        <div class="ag-smoke_smoke-2 ag-smoke_smoke-2-6"></div>
+      </div>
+
+      <div class="ag-format-container"></div>
+    </div> 
+    <!-- <div id="next" onclick="next()"> > </div>
+    <div id="prev" onclick="prev()"> < </div> -->
+  </div>
+
+  <script>
+    let slides = document.querySelectorAll(".slide-container ");
+    var index = 0;
+    function next() {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+
+    function prev() {
+      slides[index].classList.remove('active');
+      index = (index - 1 + slides.length) % slides.length;
+      slides[index].classList.add('active');
+    }
+  </script>
+    <script src="js/headingAnimation.js"></script>
+    <script src="js/contentAnimation.js"></script>
+</body>
+</html>
